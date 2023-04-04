@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+  border: 0;
+}
+input {
+  width: 100%;
+}
+
+li {
+  list-style: none;
+}
+:root {
+  --gray: #e0e0e0;
+  --line-color-gray: #e8e8ec;
+  --white: #fff;
+  --blue: #0073ea;
+  --list-gap: 25px;
+  font-size: 16px;
+}
+/* 속성 */
+.wrapper {
+  background: lightblue;
+  padding: 50px 0;
+}
+.d-flex {
+  display: flex;
+}
+.justify-content-end {
+  justify-content: flex-end;
+}
+.justify-content-center {
+  justify-content: center;
+}
+.gap-5 {
+  gap: 5rem;
+}
+
+.m-50 {
+  margin: 50px 0;
+}
+
+/* 라인 */
+.bd_b_line {
+  border-bottom: 1px solid var(--line-color-gray);
+}
+
+.bd_t_line {
+  border-top: 1px solid var(--line-color-gray);
+}
+
+@import './formfiled';
+@import './popup';
+@import './dropdown';
