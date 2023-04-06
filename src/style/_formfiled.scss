@@ -271,11 +271,16 @@
 }
 
 /* inp 속성*/
+.inp_invalid {
+  position: relative;
+}
 .inp_invalid input {
   border-color: #ff212b;
 }
 .inp_invalid p {
-  margin-top: 5px;
+  position: absolute;
+  left: 0;
+  bottom: -15px;
   font-weight: 400;
   font-size: 10px;
   line-height: 14px;
@@ -351,4 +356,183 @@ select {
   right: 10px;
   top: 50%;
   transform: translateY(-50%);
+}
+
+/*검색 INPUT*/
+.searchBox_type01 {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 320px;
+  height: 33px;
+  padding: 9px 10px;
+  box-sizing: border-box;
+  background: #e4e4e9;
+  border: 1px solid #e4e4e9;
+  border-radius: 3px;
+}
+
+.searchIcon {
+  position: absolute;
+}
+input {
+  padding-left: 27px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  appearance: none;
+  &:focus {
+    outline: none;
+  }
+  &::placeholder {
+    color: rgba(0, 0, 0, 0.25);
+  }
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration {
+    display: none;
+  }
+}
+
+.searchBox_type02 {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 320px;
+  height: 33px;
+  padding: 9px 10px;
+  box-sizing: border-box;
+  padding-bottom: 8px;
+  // background: #fff;
+  // border: 1px solid #e4e4e9;
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: red;
+  }
+  input {
+    width: 100%;
+  }
+}
+//비활성화
+.disabled {
+  background: #e4e4e9 !important;
+  border: 1px solid #dedede !important;
+  color: #fff !important;
+  cursor: auto !important;
+  border-radius: 5px;
+  pointer-events: none;
+}
+//토글버튼
+.check {
+  position: relative;
+  z-index: 1;
+  label {
+    display: block;
+    width: 56px;
+    height: 28px;
+    background: #e8e8ec;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+      &:checked + span {
+        background-color: #8ac917;
+      }
+      &:checked + span:before {
+        left: 28px;
+      }
+    }
+    & > span {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
+      border-radius: 34px;
+      &::before {
+        position: absolute;
+        content: '';
+        height: 24px;
+        width: 24px;
+        left: 4px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: white;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+.radio {
+  position: absolute;
+  left: -9999px;
+  & + em {
+    display: inline-block;
+    vertical-align: middle;
+    width: 22px;
+    height: 22px;
+    border: 1px solid #ddd;
+    background: #fff;
+    position: relative;
+    border-radius: 100%;
+    cursor: pointer;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 6px;
+      top: 6px;
+      right: 6px;
+      bottom: 6px;
+      border-radius: 100%;
+      background: #ddd;
+    }
+  }
+  & + em + span {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 16px;
+    color: #888;
+    font-weight: 500;
+    margin: -2px 0 0 8px;
+    cursor: pointer;
+  }
+  &:checked + em {
+    background: #0073ea;
+    border-color: #0073ea;
+  }
+  &:checked + em:before {
+    background: #fff;
+  }
+}
+.radioBox {
+  display: flex;
+}
+.radioBox li {
+  display: inline-block;
+  margin-right: 20px;
+}
+.radioBox li:last-child {
+  margin-right: 0;
 }

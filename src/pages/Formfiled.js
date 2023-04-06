@@ -1,27 +1,36 @@
 import React from 'react';
 import styled from 'styled-components';
 
+/**
+ * 아이콘 명칭 name + Icon
+ */
+//검색 돋보기 아이콘
+import { ReactComponent as SearchIcon } from '../assets/images/contents/ico_search_default.svg';
+
 const Formfiled = () => {
   return (
     <StyledBox>
       <div className='wrapper d-flex justify-content-center gap-5 m-50'>
-        <div class='inp_box'>
-          <input type='text' class='btn_large input_default' />
+        <div className='inp_box'>
+          <input type='text' className='btn_large input_default' />
         </div>
-        <div class='inp_box inp_invalid'>
-          <input type='text' class='btn_large input_default' />
+        <div className='inp_box inp_invalid'>
+          <input type='text' className='btn_large input_default' />
           <p>이미 등록된 닉네임 입니다.</p>
         </div>
+        <div className='inp_box disabled'>
+          <input type='text' className='btn_large input_default disabled' />
+        </div>
       </div>
       <div className='wrapper d-flex justify-content-center gap-5 m-50'>
-        <button class='btn_large btn_login '>바로노트 시작</button>
-        <button class='btn_large btn_login on '>바로노트 시작</button>
+        <button className='btn_large btn_login '>바로노트 시작</button>
+        <button className='btn_large btn_login on '>바로노트 시작</button>
       </div>
       <div className='wrapper d-flex justify-content-center gap-5 m-50'>
-        <button class='btn_big'>Google로 계속하기</button>
+        <button className='btn_big'>Google로 계속하기</button>
       </div>
       <div className='wrapper d-flex justify-content-center gap-5 m-50'>
-        <button class='btn_middle btn_create'>
+        <button className='btn_middle btn_create'>
           <svg
             width='8'
             height='8'
@@ -36,14 +45,14 @@ const Formfiled = () => {
           <span>콘텐츠 생성</span>
         </button>
 
-        <button class='btn_middle btn_recording'>
+        <button className='btn_middle btn_recording'>
           <span>녹음 시작</span>
-          <div class='record_circle '>
-            <div class='record_circle red'></div>
+          <div className='record_circle '>
+            <div className='record_circle red'></div>
           </div>
         </button>
 
-        <button class='btn_middle btn_newCreate c_list'>
+        <button className='btn_middle btn_newCreate c_list'>
           <span>신규 생성</span>
           <svg
             width='11'
@@ -59,7 +68,7 @@ const Formfiled = () => {
           </svg>
         </button>
 
-        <button class='btn_middle btn_newCreate c_calendar'>
+        <button className='btn_middle btn_newCreate c_calendar'>
           <svg
             width='13'
             height='13'
@@ -75,28 +84,28 @@ const Formfiled = () => {
           <span>신규 생성</span>
         </button>
 
-        <button class='btn_middle btn_default'>
+        <button className='btn_middle btn_default'>
           <span>닉네임 변경</span>
         </button>
 
-        <button class='btn_middle btn_default'>
+        <button className='btn_middle btn_default'>
           <span>Google Drive로 이동</span>
         </button>
       </div>
       <div className='wrapper d-flex justify-content-center gap-5 m-50'>
-        <button class='btn_small btn_download'>
+        <button className='btn_small btn_download'>
           <span>다운로드</span>
         </button>
-        <button class='btn_small btn_delete'>
+        <button className='btn_small btn_delete'>
           <span>삭제</span>
         </button>
-        <button class='btn_small btn_delete btn_red'>
+        <button className='btn_small btn_delete btn_red'>
           <span>삭제</span>
         </button>
-        <button class='btn_small btn_cancel'>
+        <button className='btn_small btn_cancel'>
           <span>취소</span>
         </button>
-        <div class='btn_dropdown'>
+        <div className='btn_dropdown'>
           <span>소유자</span>
           <svg
             width='10'
@@ -111,7 +120,7 @@ const Formfiled = () => {
             ></path>
           </svg>
         </div>
-        <div class='btn_dropdown btn_blue'>
+        <div className='btn_dropdown btn_blue'>
           <span>콘텐츠 유형</span>
           <svg
             width='10'
@@ -126,7 +135,7 @@ const Formfiled = () => {
             ></path>
           </svg>
         </div>
-        <div class='btn_dropdown btn_blue'>
+        <div className='btn_dropdown btn_blue'>
           <span>노트</span>
           <svg
             width='8'
@@ -143,7 +152,7 @@ const Formfiled = () => {
         </div>
       </div>
       <div className='wrapper d-flex justify-content-center gap-5 m-50'>
-        <div class='select'>
+        <div className='select'>
           <select>
             <option value=''>텍스트1</option>
             <option value=''>텍스트2</option>
@@ -164,11 +173,50 @@ const Formfiled = () => {
         </div>
       </div>
 
-      {/* <div className='wrapper d-flex justify-content-center gap-5 m-50'></div> */}
+      <div className='wrapper d-flex justify-content-center gap-5 m-50 bg-white'>
+        <div className='searchBox_type01'>
+          <SearchIcon className='searchIcon' />
+          <input type='search' placeholder='전체에서 검색' />
+        </div>
+        <div className='searchBox_type02'>
+          <SearchIcon className='searchIcon' />
+          <input type='search' placeholder='파일에서 찾기' />
+        </div>
+      </div>
+      <div className='wrapper d-flex justify-content-center gap-5 m-50 bg-white'>
+        <div className='check'>
+          <label htmlFor='check01'>
+            <input type='checkbox' id='check01' />
+            <span></span>
+          </label>
+        </div>
+      </div>
+      <div className='wrapper d-flex justify-content-center gap-5 m-50 bg-white'>
+        <ul className='radioBox'>
+          <li>
+            <label>
+              <input type='radio' className='radio' name='open' />
+              <em></em>
+              <span>ex1</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type='radio' className='radio' name='open' />
+              <em></em>
+              <span>ex2</span>
+            </label>
+          </li>
+        </ul>
+      </div>
     </StyledBox>
   );
 };
 
 export default Formfiled;
 
-const StyledBox = styled.div``;
+const StyledBox = styled.div`
+  .bg-white {
+    background-color: #f2f2f2 !important;
+  }
+`;
