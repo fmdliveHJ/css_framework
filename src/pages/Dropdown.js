@@ -1,13 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
+
+/**
+ * 아이콘 명칭 name + Icon
+ */
+import { ReactComponent as Ex01 } from '../assets/images/contents/ico_ex01.svg';
+import { ReactComponent as Ex02 } from '../assets/images/contents/ico_ex02.svg';
+import { ReactComponent as Ex03 } from '../assets/images/contents/ico_ex03.svg';
 const Dropdown = () => {
   return (
     <StyledBox>
       <div className='wrapper d-flex justify-content-center gap-5 m-50'>
-        <div class='dropdown'>
-          <div class='dropdown_default'>
-            <ul class='dropdown_list'>
-              <li class='folder'>
+        <div className='dropdown'>
+          <div className='dropdown_default'>
+            <ul className='dropdown_list'>
+              <li className='folder'>
                 <i>
                   <svg
                     width='18'
@@ -24,7 +31,7 @@ const Dropdown = () => {
                 </i>
                 <span>새로운폴더</span>
               </li>
-              <li class='note'>
+              <li className='note'>
                 <i>
                   <svg
                     width='18'
@@ -41,7 +48,7 @@ const Dropdown = () => {
                 </i>
                 <span>새로운노트</span>
               </li>
-              <li class='recording'>
+              <li className='recording'>
                 <i>
                   <svg
                     width='18'
@@ -61,9 +68,9 @@ const Dropdown = () => {
             </ul>
           </div>
         </div>
-        <div class='dropdown'>
-          <div class='dropdown_default text_only'>
-            <ul class='dropdown_list '>
+        <div className='dropdown'>
+          <div className='dropdown_default_type02'>
+            <ul className='dropdown_list '>
               <li>
                 <span>txt</span>
               </li>
@@ -72,6 +79,30 @@ const Dropdown = () => {
               </li>
               <li>
                 <span>smi</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className='dropdown'>
+          <div className='dropdown_default_type03'>
+            <ul className='dropdown_list_type03'>
+              <li>
+                <i>
+                  <Ex01 />
+                </i>
+                <span>요약</span>
+              </li>
+              <li>
+                <i>
+                  <Ex02 />
+                </i>
+                <span>할 일 생성</span>
+              </li>
+              <li>
+                <i>
+                  <Ex03 />
+                </i>
+                <span>번역</span>
               </li>
             </ul>
           </div>

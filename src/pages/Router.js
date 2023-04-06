@@ -7,15 +7,17 @@ import Formfiled from './Formfiled';
 import styled from 'styled-components';
 import Interactive from './Interactive';
 import ColorTextGuilde from './ColorTextGuilde';
+import IconGuide from './IconGuide';
 
 const Router = () => {
   return (
     <>
       <NavList>
-        <NavLink to='/colortextguide'>ColorTextGuide</NavLink>
+        <NavLink to='/'>ColorTextGuide</NavLink>
         <NavLink to='/formfiled'>Form filed</NavLink>
         <NavLink to='/dropdown'>Dropdown</NavLink>
         <NavLink to='/popup'>Popup</NavLink>
+        <NavLink to='/iconguide'>IconGuide</NavLink>
         <NavLink to='/interactive'>Interactive</NavLink>
       </NavList>
       <Routes>
@@ -23,7 +25,8 @@ const Router = () => {
         <Route path='/dropdown' element={<Dropdown />}></Route>
         <Route path='/popup' element={<Popup />}></Route>
         <Route path='/interactive' element={<Interactive />}></Route>
-        <Route path='/colortextguide' element={<ColorTextGuilde />}></Route>
+        <Route path='/iconguide' element={<IconGuide />}></Route>
+        <Route path='/' element={<ColorTextGuilde />}></Route>
       </Routes>
     </>
   );

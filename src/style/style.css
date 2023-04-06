@@ -36,6 +36,7 @@ li {
 .wrapper {
   background: lightblue;
   padding: 50px 0;
+  flex-wrap: wrap;
 }
 
 .d-flex {
@@ -356,12 +357,18 @@ li {
 }
 
 /* inp 속성*/
+.inp_invalid {
+  position: relative;
+}
+
 .inp_invalid input {
   border-color: #ff212b;
 }
 
 .inp_invalid p {
-  margin-top: 5px;
+  position: absolute;
+  left: 0;
+  bottom: -15px;
   font-weight: 400;
   font-size: 10px;
   line-height: 14px;
@@ -447,6 +454,187 @@ select {
   right: 10px;
   top: 50%;
   transform: translateY(-50%);
+}
+
+/*검색 INPUT*/
+.searchBox_type01 {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 320px;
+  height: 33px;
+  padding: 9px 10px;
+  box-sizing: border-box;
+  background: #e4e4e9;
+  border: 1px solid #e4e4e9;
+  border-radius: 3px;
+}
+
+.searchIcon {
+  position: absolute;
+}
+
+input {
+  padding-left: 27px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+input:focus {
+  outline: none;
+}
+input::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.25);
+}
+input::placeholder {
+  color: rgba(0, 0, 0, 0.25);
+}
+input::-webkit-search-decoration, input::-webkit-search-cancel-button, input::-webkit-search-results-button, input::-webkit-search-results-decoration {
+  display: none;
+}
+
+.searchBox_type02 {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 320px;
+  height: 33px;
+  padding: 9px 10px;
+  box-sizing: border-box;
+  padding-bottom: 8px;
+}
+.searchBox_type02::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: red;
+}
+.searchBox_type02 input {
+  width: 100%;
+}
+
+.disabled {
+  background: #e4e4e9 !important;
+  border: 1px solid #dedede !important;
+  color: #fff !important;
+  cursor: auto !important;
+  border-radius: 5px;
+  pointer-events: none;
+}
+
+.check {
+  position: relative;
+  z-index: 1;
+}
+.check label {
+  display: block;
+  width: 56px;
+  height: 28px;
+  background: #e8e8ec;
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.check label input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.check label input:checked + span {
+  background-color: #8ac917;
+}
+.check label input:checked + span:before {
+  left: 28px;
+}
+.check label > span {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+.check label > span::before {
+  position: absolute;
+  content: "";
+  height: 24px;
+  width: 24px;
+  left: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+.radio {
+  position: absolute;
+  left: -9999px;
+}
+.radio + em {
+  display: inline-block;
+  vertical-align: middle;
+  width: 22px;
+  height: 22px;
+  border: 1px solid #ddd;
+  background: #fff;
+  position: relative;
+  border-radius: 100%;
+  cursor: pointer;
+}
+.radio + em::before {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 6px;
+  right: 6px;
+  bottom: 6px;
+  border-radius: 100%;
+  background: #ddd;
+}
+.radio + em + span {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 16px;
+  color: #888;
+  font-weight: 500;
+  margin: -2px 0 0 8px;
+  cursor: pointer;
+}
+.radio:checked + em {
+  background: #0073ea;
+  border-color: #0073ea;
+}
+.radio:checked + em:before {
+  background: #fff;
+}
+
+.radioBox {
+  display: flex;
+}
+
+.radioBox li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.radioBox li:last-child {
+  margin-right: 0;
 }
 
 /* 팝업 */
@@ -566,6 +754,7 @@ select {
 }
 
 .modal_breadcrumb {
+  margin-top: 10px;
   margin-left: 31px;
   display: flex;
   align-items: center;
@@ -715,61 +904,6 @@ select {
   color: #8b8e95;
 }
 
-.check {
-  position: relative;
-  z-index: 1;
-}
-
-.check label {
-  display: block;
-  width: 56px;
-  height: 28px;
-  background: #e8e8ec;
-  border-radius: 20px;
-  position: relative;
-  cursor: pointer;
-  transition: all 0.25s ease;
-}
-
-.check label input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.check label input:checked + span {
-  background-color: #8ac917;
-}
-
-.check label input:checked + span:before {
-  left: 28px;
-}
-
-.check label > span {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  transition: 0.4s;
-  border-radius: 34px;
-}
-
-.check label > span::before {
-  position: absolute;
-  content: "";
-  height: 24px;
-  width: 24px;
-  left: 4px;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: white;
-  transition: 0.4s;
-  border-radius: 50%;
-}
-
 .modal_bottom {
   padding: 10px 19px 10px 25px;
   box-sizing: border-box;
@@ -836,11 +970,17 @@ select {
   display: none;
 }
 
-.dropdown_default.text_only {
+.dropdown_default_type02 {
   padding: 2px 0;
+  min-width: 172px;
+  min-height: 85px;
+  background: #fff;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+  box-sizing: border-box;
 }
 
-.text_only .dropdown_list li {
+.dropdown_default_type02 .dropdown_list li {
   padding: 5px 8px;
   font-style: normal;
   font-weight: 500;
@@ -850,4 +990,43 @@ select {
   align-items: center;
   color: #000;
   cursor: pointer;
+}
+
+.dropdown_default_type03 {
+  background: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 6px;
+  border-radius: 3px;
+  min-width: 182px;
+  padding: 13px 10px 15px 22px;
+  box-sizing: border-box;
+}
+
+.dropdown_default_type03 .dropdown_list_type03 li {
+  position: relative;
+  margin-bottom: 7px;
+  padding: 0;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+.dropdown_default_type03 .dropdown_list_type03 li:last-child {
+  margin-bottom: 0;
+}
+.dropdown_default_type03 .dropdown_list_type03 li svg path {
+  fill: #000;
+}
+.dropdown_default_type03 .dropdown_list_type03 li:hover {
+  background: #fff;
+}
+.dropdown_default_type03 .dropdown_list_type03 li:hover span {
+  color: lightblue;
+}
+.dropdown_default_type03 .dropdown_list_type03 li:hover svg path {
+  fill: lightblue;
+}
+.dropdown_default_type03 .dropdown_list_type03 li i {
+  width: 16px;
+  margin-right: 25px;
+  position: relative;
 }
