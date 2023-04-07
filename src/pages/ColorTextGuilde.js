@@ -61,7 +61,7 @@ const ColorTextGuilde = () => {
           </ul>
         </div>
         <div>
-          <h3>Background</h3>
+          <h3>Branding</h3>
           <ul>
             <li>
               <span className='color_bg01'></span>
@@ -111,6 +111,77 @@ const ColorTextGuilde = () => {
 
       <div className='wrapper d-flex m-50'>
         <h2>Text</h2>
+        <div class='table'>
+          <table>
+            <thead>
+              <tr>
+                <th>Font</th>
+                <th>Size</th>
+                <th>Line-hight</th>
+                <th>Letter space</th>
+                <th>Use</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class='f10'>
+                <td>Noto Sans CJK KR</td>
+                <td>10</td>
+                <td>20px</td>
+                <td>-0.03em</td>
+                <td class='txt_left'>뱃지, 시간 </td>
+              </tr>
+              <tr class='f12'>
+                <td>Noto Sans CJK KR</td>
+                <td>12</td>
+                <td>20px</td>
+                <td>-0.03em</td>
+                <td class='txt_left'>박스 컨텐츠 내 회원정보 , 툴팁, 버튼</td>
+              </tr>
+              <tr class='f14'>
+                <td>Noto Sans CJK KR</td>
+                <td>14</td>
+                <td>20px</td>
+                <td>-0.03em</td>
+                <td class='txt_left'>박스 컨텐츠 내 회원정보 , 툴팁, 버튼</td>
+              </tr>
+              <tr class='f16'>
+                <td>Noto Sans CJK KR</td>
+                <td>16</td>
+                <td>24px</td>
+                <td>-0.03em</td>
+                <td class='txt_left'>본문</td>
+              </tr>
+              <tr class='f18'>
+                <td>Noto Sans CJK KR</td>
+                <td>18</td>
+                <td>20px</td>
+                <td>-0.03em</td>
+                <td class='txt_left'>소타이틀, 본문</td>
+              </tr>
+              <tr class='f24'>
+                <td>Noto Sans CJK KR</td>
+                <td>22</td>
+                <td></td>
+                <td>-0.03em</td>
+                <td class='txt_left'>중타이틀</td>
+              </tr>
+              <tr class='f28'>
+                <td>Noto Sans CJK KR</td>
+                <td>28</td>
+                <td></td>
+                <td>-0.03em</td>
+                <td class='txt_left'>대타이틀</td>
+              </tr>
+              <tr class='eng'>
+                <td>Roboto Bold</td>
+                <td></td>
+                <td></td>
+                <td>-0.03em</td>
+                <td class='txt_left'>영문폰트</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </StyledBox>
   );
@@ -193,5 +264,46 @@ const StyledBox = styled.div`
         }
       }
     }
+  }
+
+  /* table */
+  .table table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .table table thead th {
+    height: 58px;
+    border-bottom: 1px solid #888;
+    font-weight: bold;
+  }
+  .table table tbody td {
+    line-height: 1.4;
+    color: #717171;
+    padding: 15px 30px;
+    padding-left: 15px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  /* 폰트사이즈 */
+  .f28 {
+    font-size: 28px;
+  }
+  .f24 {
+    font-size: 24px;
+  }
+  .f18 {
+    font-size: 18px;
+  }
+  .f16 {
+    font-size: 16px;
+  }
+  .f14 {
+    font-size: 14px;
+  }
+  .f12 {
+    font-size: 12px;
+  }
+  .f10 {
+    font-size: 10px;
   }
 `;

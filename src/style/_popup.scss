@@ -46,26 +46,6 @@
   box-sizing: border-box;
 }
 
-.form_box {
-  display: flex;
-  box-sizing: border-box;
-}
-
-.input_default {
-  padding-left: 12px;
-  background: #fff;
-  border: 1px solid #dcdddd;
-  border-radius: 5px;
-  font-size: 14px;
-  line-height: 19px;
-  display: flex;
-  align-items: center;
-  appearance: none;
-}
-.input_default::placeholder {
-  color: #8b8e95;
-}
-
 /* 모달 */
 .modal_body {
   position: relative;

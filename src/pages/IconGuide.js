@@ -27,6 +27,14 @@ import { ReactComponent as Ex02Icon } from '../assets/images/contents/ico_ex02.s
 import { ReactComponent as Ex03Icon } from '../assets/images/contents/ico_ex03.svg';
 import { ReactComponent as MarkDefaultIcon } from '../assets/images/contents/ico_mark_default.svg';
 import { ReactComponent as RecycleDefaultIcon } from '../assets/images/contents/ico_recycle_default.svg';
+
+import { ReactComponent as ClipIcon } from '../assets/images/contents/ico_clip.svg';
+import { ReactComponent as DownloadDefaultIcon } from '../assets/images/contents/ico_download_default.svg';
+import { ReactComponent as SummaryIcon } from '../assets/images/contents/ico_summary.svg';
+import { ReactComponent as VersionIcon } from '../assets/images/contents/ico_version.svg';
+import { ReactComponent as FavoriteIcon } from '../assets/images/contents/ico_favorite.svg';
+import { ReactComponent as ClipType02Icon } from '../assets/images/contents/ico_clip_type02.svg';
+
 const IconGuide = () => {
   return (
     <StyledBox>
@@ -49,7 +57,16 @@ const IconGuide = () => {
         <Ex01Icon style={{ fill: '#000' }} />
         <Ex02Icon style={{ fill: '#000' }} />
         <Ex03Icon style={{ fill: '#000' }} />
+        <ClipIcon style={{ fill: '#000' }} />
+        <DownloadDefaultIcon style={{ fill: '#000' }} />
+        <SummaryIcon style={{ fill: '#000' }} />
+        <VersionIcon style={{ fill: '#000' }} />
+        <FavoriteIcon style={{ stroke: '#000' }} />
+        <FavoriteIcon style={{ fill: 'yellow' }} />
+        {/* path외에 rect가 들어갈경우 따로 설정해줘야함  */}
+        <ClipType02Icon className='clipType02' />
       </div>
+      <div className='wrapper d-flex justify-content-center gap-5 m-50'></div>
     </StyledBox>
   );
 };

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-const Popup = () => {
+const Modal = () => {
   return (
     <StyledBox>
       <div className='wrapper d-flex justify-content-center gap-5 m-50'>
@@ -227,6 +227,6 @@ const Popup = () => {
   );
 };
 
-export default Popup;
+export default Modal;
 
 const StyledBox = styled.div``;

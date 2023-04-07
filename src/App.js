@@ -1,6 +1,7 @@
 import { BrowserRouter } from 'react-router-dom';
 import Router from './pages/Router';
 import './style/reset.css';
+import './style/guide.css';
 import './style/style.css';
 
 function App() {
