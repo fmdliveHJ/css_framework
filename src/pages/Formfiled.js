@@ -12,6 +12,30 @@ const Formfiled = () => {
     <StyledBox>
       <div className='wrapper d-flex justify-content-center gap-5 m-50'>
         <div className='inp_box'>
+          <input
+            type='text'
+            className='btn_large input_default'
+            placeholder='btn_large'
+          />
+        </div>
+
+        <div className='inp_box'>
+          <input
+            type='text'
+            className='btn_middle input_default'
+            placeholder='btn_middle'
+          />
+        </div>
+        <div className='inp_box'>
+          <input
+            type='text'
+            className='btn_small input_default'
+            placeholder='btn_small'
+          />
+        </div>
+      </div>
+      <div className='wrapper d-flex justify-content-center gap-5 m-50'>
+        <div className='inp_box'>
           <input type='text' className='btn_large input_default' />
         </div>
         <div className='inp_box inp_invalid'>
@@ -175,11 +199,11 @@ const Formfiled = () => {
 
       <div className='wrapper d-flex justify-content-center gap-5 m-50 bg-white'>
         <div className='searchBox_type01'>
-          <SearchIcon className='searchIcon' />
+          <SearchIcon className='searchIcon' style={{ stroke: '#8b8e95' }} />
           <input type='search' placeholder='전체에서 검색' />
         </div>
         <div className='searchBox_type02'>
-          <SearchIcon className='searchIcon' />
+          <SearchIcon className='searchIcon' style={{ stroke: '#8b8e95' }} />
           <input type='search' placeholder='파일에서 찾기' />
         </div>
       </div>
