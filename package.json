@@ -1,11 +1,15 @@
 {
-  "name": "css_framework",
-  "version": "0.1.0",
-  "private": true,
+  "name": "@baro/css_framework",
+  "version": "0.0.1",
+  "private": false,
+  "main": "src/style/index.css",
   "dependencies": {
+    "@babel/cli": "^7.21.0",
+    "@babel/preset-react": "^7.18.6",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "baro_css": "^0.0.1",
     "node-sass": "^8.0.0",
     "prismjs": "^1.29.0",
     "react": "^18.2.0",
@@ -14,12 +18,13 @@
     "react-router-dom": "^6.10.0",
     "react-scripts": "5.0.1",
     "react-syntax-highlighter": "^15.5.0",
+    "sass": "^1.43.4",
     "styled-components": "^5.3.9",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "mkdir -p src/style && sass src/style/index.scss src/style/index.css",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
