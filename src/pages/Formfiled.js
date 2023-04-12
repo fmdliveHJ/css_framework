@@ -3,6 +3,9 @@ import styled from 'styled-components';
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import Prism from 'prismjs';
+import Button from '../components/Button/Button';
+// import { Button } from 'baro_css_styled';
+
 /**
  * 아이콘 명칭 name + Icon
  */
@@ -21,18 +24,54 @@ const Formfiled = ({ language }) => {
   return (
     <StyledBox>
       <div className='wrapper d-flex justify-content-center  m-50 flex-col'>
-        {/* <div className='columns'>
+        <div className='columns'>
           <div className='column'>
-            내용
+            <Button className='big'>btn_big</Button>
           </div>
           <div className='column'>
             <SyntaxHighlighter language='html' style={docco}>
               {`
-               내용
-              `}
+          <Button className='big'>btn_big</Button>
+            `}
             </SyntaxHighlighter>
           </div>
-        </div> */}
+        </div>
+        <div className='columns'>
+          <div className='column'>
+            <Button className='large'>btn_large</Button>
+          </div>
+          <div className='column'>
+            <SyntaxHighlighter language='html' style={docco}>
+              {`
+          <Button className='large'>btn_large</Button>
+            `}
+            </SyntaxHighlighter>
+          </div>
+        </div>
+        <div className='columns'>
+          <div className='column'>
+            <Button className='middle'>btn_middle</Button>
+          </div>
+          <div className='column'>
+            <SyntaxHighlighter language='html' style={docco}>
+              {`
+          <Button className='middle'>btn_middle</Button>
+            `}
+            </SyntaxHighlighter>
+          </div>
+        </div>
+        <div className='columns'>
+          <div className='column'>
+            <Button className='small'>btn_small</Button>
+          </div>
+          <div className='column'>
+            <SyntaxHighlighter language='html' style={docco}>
+              {`
+          <Button className='small'>btn_small</Button>
+            `}
+            </SyntaxHighlighter>
+          </div>
+        </div>
 
         <div className='columns'>
           <div className='column'>
