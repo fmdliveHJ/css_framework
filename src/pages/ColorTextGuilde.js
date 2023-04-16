@@ -109,9 +109,9 @@ const ColorTextGuilde = () => {
         </div>
       </div>
 
-      <div className='wrapper d-flex m-50'>
-        <h2>Text</h2>
-        <div class='table'>
+      <div className='wrapper d-flex m-50 gothicA'>
+        <h2>GothicA</h2>
+        <div className='table'>
           <table>
             <thead>
               <tr>
@@ -123,61 +123,272 @@ const ColorTextGuilde = () => {
               </tr>
             </thead>
             <tbody>
-              <tr class='f10'>
-                <td>Noto Sans CJK KR</td>
+              <tr className='f10'>
+                <td>안녕하세요 테스트입니다</td>
                 <td>10</td>
                 <td>20px</td>
                 <td>-0.03em</td>
-                <td class='txt_left'>뱃지, 시간 </td>
+                <td className='txt_left'>뱃지, 시간 </td>
               </tr>
-              <tr class='f12'>
-                <td>Noto Sans CJK KR</td>
+              <tr className='f12'>
+                <td>안녕하세요 테스트입니다</td>
                 <td>12</td>
                 <td>20px</td>
                 <td>-0.03em</td>
-                <td class='txt_left'>박스 컨텐츠 내 회원정보 , 툴팁, 버튼</td>
+                <td className='txt_left'>
+                  박스 컨텐츠 내 회원정보 , 툴팁, 버튼
+                </td>
               </tr>
-              <tr class='f14'>
-                <td>Noto Sans CJK KR</td>
+              <tr className='f14'>
+                <td>안녕하세요 테스트입니다</td>
                 <td>14</td>
                 <td>20px</td>
                 <td>-0.03em</td>
-                <td class='txt_left'>박스 컨텐츠 내 회원정보 , 툴팁, 버튼</td>
+                <td className='txt_left'>
+                  박스 컨텐츠 내 회원정보 , 툴팁, 버튼
+                </td>
               </tr>
-              <tr class='f16'>
-                <td>Noto Sans CJK KR</td>
+              <tr className='f16'>
+                <td>안녕하세요 테스트입니다</td>
                 <td>16</td>
                 <td>24px</td>
                 <td>-0.03em</td>
-                <td class='txt_left'>본문</td>
+                <td className='txt_left'>본문</td>
               </tr>
-              <tr class='f18'>
-                <td>Noto Sans CJK KR</td>
+              <tr className='f18'>
+                <td>안녕하세요 테스트입니다</td>
                 <td>18</td>
                 <td>20px</td>
                 <td>-0.03em</td>
-                <td class='txt_left'>소타이틀, 본문</td>
+                <td className='txt_left'>소타이틀, 본문</td>
               </tr>
-              <tr class='f24'>
-                <td>Noto Sans CJK KR</td>
+              <tr className='f24'>
+                <td>안녕하세요 테스트입니다</td>
                 <td>22</td>
                 <td></td>
                 <td>-0.03em</td>
-                <td class='txt_left'>중타이틀</td>
+                <td className='txt_left'>중타이틀</td>
               </tr>
-              <tr class='f28'>
-                <td>Noto Sans CJK KR</td>
+              <tr className='f28'>
+                <td>안녕하세요 테스트입니다</td>
                 <td>28</td>
                 <td></td>
                 <td>-0.03em</td>
-                <td class='txt_left'>대타이틀</td>
+                <td className='txt_left'>대타이틀</td>
               </tr>
-              <tr class='eng'>
-                <td>Roboto Bold</td>
-                <td></td>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div className='wrapper d-flex m-50 gmarket'>
+        <h2>Gmarket</h2>
+        <div className='table'>
+          <table>
+            <thead>
+              <tr>
+                <th>Font</th>
+                <th>Size</th>
+                <th>Line-hight</th>
+                <th>Letter space</th>
+                <th>Use</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className='f10'>
+                <td>안녕하세요 테스트입니다</td>
+                <td>10</td>
+                <td>20px</td>
+                <td>-0.03em</td>
+                <td className='txt_left'>뱃지, 시간 </td>
+              </tr>
+              <tr className='f12'>
+                <td>안녕하세요 테스트입니다</td>
+                <td>12</td>
+                <td>20px</td>
+                <td>-0.03em</td>
+                <td className='txt_left'>
+                  박스 컨텐츠 내 회원정보 , 툴팁, 버튼
+                </td>
+              </tr>
+              <tr className='f14'>
+                <td>안녕하세요 테스트입니다</td>
+                <td>14</td>
+                <td>20px</td>
+                <td>-0.03em</td>
+                <td className='txt_left'>
+                  박스 컨텐츠 내 회원정보 , 툴팁, 버튼
+                </td>
+              </tr>
+              <tr className='f16'>
+                <td>안녕하세요 테스트입니다</td>
+                <td>16</td>
+                <td>24px</td>
+                <td>-0.03em</td>
+                <td className='txt_left'>본문</td>
+              </tr>
+              <tr className='f18'>
+                <td>안녕하세요 테스트입니다</td>
+                <td>18</td>
+                <td>20px</td>
+                <td>-0.03em</td>
+                <td className='txt_left'>소타이틀, 본문</td>
+              </tr>
+              <tr className='f24'>
+                <td>안녕하세요 테스트입니다</td>
+                <td>22</td>
                 <td></td>
                 <td>-0.03em</td>
-                <td class='txt_left'>영문폰트</td>
+                <td className='txt_left'>중타이틀</td>
+              </tr>
+              <tr className='f28'>
+                <td>안녕하세요 테스트입니다</td>
+                <td>28</td>
+                <td></td>
+                <td>-0.03em</td>
+                <td className='txt_left'>대타이틀</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div className='wrapper d-flex m-50 escore'>
+        <h2>escore</h2>
+        <div className='table'>
+          <table>
+            <thead>
+              <tr>
+                <th>Font</th>
+                <th>Size</th>
+                <th>Line-hight</th>
+                <th>Letter space</th>
+                <th>Use</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className='f10'>
+                <td>안녕하세요 테스트입니다</td>
+                <td>10</td>
+                <td>20px</td>
+                <td>-0.03em</td>
+                <td className='txt_left'>뱃지, 시간 </td>
+              </tr>
+              <tr className='f12'>
+                <td>안녕하세요 테스트입니다</td>
+                <td>12</td>
+                <td>20px</td>
+                <td>-0.03em</td>
+                <td className='txt_left'>
+                  박스 컨텐츠 내 회원정보 , 툴팁, 버튼
+                </td>
+              </tr>
+              <tr className='f14'>
+                <td>안녕하세요 테스트입니다</td>
+                <td>14</td>
+                <td>20px</td>
+                <td>-0.03em</td>
+                <td className='txt_left'>
+                  박스 컨텐츠 내 회원정보 , 툴팁, 버튼
+                </td>
+              </tr>
+              <tr className='f16'>
+                <td>안녕하세요 테스트입니다</td>
+                <td>16</td>
+                <td>24px</td>
+                <td>-0.03em</td>
+                <td className='txt_left'>본문</td>
+              </tr>
+              <tr className='f18'>
+                <td>안녕하세요 테스트입니다</td>
+                <td>18</td>
+                <td>20px</td>
+                <td>-0.03em</td>
+                <td className='txt_left'>소타이틀, 본문</td>
+              </tr>
+              <tr className='f24'>
+                <td>안녕하세요 테스트입니다</td>
+                <td>22</td>
+                <td></td>
+                <td>-0.03em</td>
+                <td className='txt_left'>중타이틀</td>
+              </tr>
+              <tr className='f28'>
+                <td>안녕하세요 테스트입니다</td>
+                <td>28</td>
+                <td></td>
+                <td>-0.03em</td>
+                <td className='txt_left'>대타이틀</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div className='wrapper d-flex m-50 NanumSquare'>
+        <h2>NanumSquare</h2>
+        <div className='table'>
+          <table>
+            <thead>
+              <tr>
+                <th>Font</th>
+                <th>Size</th>
+                <th>Line-hight</th>
+                <th>Letter space</th>
+                <th>Use</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className='f10'>
+                <td>안녕하세요 테스트입니다</td>
+                <td>10</td>
+                <td>20px</td>
+                <td>-0.03em</td>
+                <td className='txt_left'>뱃지, 시간 </td>
+              </tr>
+              <tr className='f12'>
+                <td>안녕하세요 테스트입니다</td>
+                <td>12</td>
+                <td>20px</td>
+                <td>-0.03em</td>
+                <td className='txt_left'>
+                  박스 컨텐츠 내 회원정보 , 툴팁, 버튼
+                </td>
+              </tr>
+              <tr className='f14'>
+                <td>안녕하세요 테스트입니다</td>
+                <td>14</td>
+                <td>20px</td>
+                <td>-0.03em</td>
+                <td className='txt_left'>
+                  박스 컨텐츠 내 회원정보 , 툴팁, 버튼
+                </td>
+              </tr>
+              <tr className='f16'>
+                <td>안녕하세요 테스트입니다</td>
+                <td>16</td>
+                <td>24px</td>
+                <td>-0.03em</td>
+                <td className='txt_left'>본문</td>
+              </tr>
+              <tr className='f18'>
+                <td>안녕하세요 테스트입니다</td>
+                <td>18</td>
+                <td>20px</td>
+                <td>-0.03em</td>
+                <td className='txt_left'>소타이틀, 본문</td>
+              </tr>
+              <tr className='f24'>
+                <td>안녕하세요 테스트입니다</td>
+                <td>22</td>
+                <td></td>
+                <td>-0.03em</td>
+                <td className='txt_left'>중타이틀</td>
+              </tr>
+              <tr className='f28'>
+                <td>안녕하세요 테스트입니다</td>
+                <td>28</td>
+                <td></td>
+                <td>-0.03em</td>
+                <td className='txt_left'>대타이틀</td>
               </tr>
             </tbody>
           </table>
@@ -196,10 +407,11 @@ const StyledBox = styled.div`
     padding: 20px;
     background: #fff;
     flex-direction: column;
-    gap: 3rem;
+    /* gap: 3rem; */
   }
   h2 {
     font-size: 4rem;
+    margin: 0;
   }
   h3 {
     margin-bottom: 20px;

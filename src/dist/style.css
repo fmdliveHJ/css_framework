@@ -7,24 +7,12 @@
   --list-gap: 25px;
   font-size: 16px;
 }
-.gothicA {
-  font-family: 'gothicA' !important;
-}
-.gmarket {
-  font-family: 'Gmarket' !important;
-}
-.escore {
-  font-family: 'escore' !important;
-}
-.NanumSquare {
-  font-family: 'NanumSquare' !important;
-}
+
 /* 속성 */
 .wrapper {
   background: lightblue;
   padding: 50px 0;
   flex-wrap: wrap;
-  gap: 2rem;
 }
 
 .d-flex {
@@ -402,9 +390,18 @@
   line-height: 19px;
   display: flex;
   align-items: center;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+.input_default::-moz-placeholder {
+  color: #8b8e95;
 }
 .input_default::placeholder {
+  color: #8b8e95;
+}
+
+.input_default::-moz-placeholder {
   color: #8b8e95;
 }
 
@@ -444,7 +441,9 @@
 
 /*셀렉트*/
 select {
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 .select {
@@ -498,18 +497,20 @@ input {
   align-items: center;
   background: none;
   border: none;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 input:focus {
   outline: none;
 }
+input::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.25);
+}
 input::placeholder {
   color: rgba(0, 0, 0, 0.25);
 }
-input::-webkit-search-decoration,
-input::-webkit-search-cancel-button,
-input::-webkit-search-results-button,
-input::-webkit-search-results-decoration {
+input::-webkit-search-decoration, input::-webkit-search-cancel-button, input::-webkit-search-results-button, input::-webkit-search-results-decoration {
   display: none;
 }
 
@@ -524,7 +525,7 @@ input::-webkit-search-results-decoration {
   padding-bottom: 8px;
 }
 .searchBox_type02::after {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   bottom: -8px;
@@ -579,20 +580,18 @@ input::-webkit-search-results-decoration {
   right: 0;
   bottom: 0;
   background-color: #ccc;
-  -webkit-transition: 0.4s;
   transition: 0.4s;
   border-radius: 34px;
 }
 .check label > span::before {
   position: absolute;
-  content: '';
+  content: "";
   height: 24px;
   width: 24px;
   left: 4px;
   top: 50%;
   transform: translateY(-50%);
   background-color: white;
-  -webkit-transition: 0.4s;
   transition: 0.4s;
   border-radius: 50%;
 }
@@ -613,7 +612,7 @@ input::-webkit-search-results-decoration {
   cursor: pointer;
 }
 .radio + em::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 6px;
   top: 6px;
@@ -981,7 +980,7 @@ input::-webkit-search-results-decoration {
 }
 
 .dropdown_default_type03 {
-  background: white;
+  background: rgb(255, 255, 255);
   box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 6px;
   border-radius: 3px;
   min-width: 182px;
@@ -1022,7 +1021,6 @@ input::-webkit-search-results-decoration {
 .clipType02 path {
   fill: #000;
 }
-
 .clipType02 rect {
   fill: #fff;
 }

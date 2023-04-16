@@ -1,0 +1,116 @@
+import React, { Children } from 'react';
+import styled from 'styled-components';
+
+const Dropdown = ({ children }) => {
+  return <DropdownBox className='dropdown'>{children}</DropdownBox>;
+};
+
+export default Dropdown;
+
+const DropdownBox = styled.div`
+  margin: 30px 0;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  justify-content: center;
+
+  .dropdown_default {
+    padding: 12px 0;
+    min-width: 172px;
+    min-height: 85px;
+    background: #fff;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+    box-sizing: border-box;
+  }
+
+  .dropdown_list li {
+    position: relative;
+    margin-bottom: 7px;
+    padding: 5px 8px 5px 56px;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 14px;
+    box-sizing: border-box;
+  }
+
+  .dropdown_list li:last-child {
+    margin-bottom: 0;
+  }
+  .dropdown_list li:hover {
+    background-color: #cce5ff;
+  }
+  .dropdown_list li i {
+    position: absolute;
+    left: 13px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-block;
+  }
+
+  .dropdown_modal {
+    display: none;
+  }
+
+  .dropdown_default_type02 {
+    padding: 2px 0;
+    min-width: 172px;
+    min-height: 85px;
+    background: #fff;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+    box-sizing: border-box;
+  }
+
+  .dropdown_default_type02 .dropdown_list li {
+    padding: 5px 8px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    color: #000;
+    cursor: pointer;
+  }
+
+  .dropdown_default_type03 {
+    background: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 6px;
+    border-radius: 3px;
+    min-width: 182px;
+    padding: 13px 10px 15px 22px;
+    box-sizing: border-box;
+  }
+  .dropdown_default_type03 .dropdown_list_type03 li {
+    position: relative;
+    margin-bottom: 7px;
+    padding: 0;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 14px;
+    box-sizing: border-box;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    svg path {
+      fill: #000;
+    }
+    &:hover {
+      background: #fff;
+      span {
+        color: lightblue;
+      }
+      svg path {
+        fill: lightblue;
+      }
+    }
+    i {
+      width: 16px;
+      margin-right: 25px;
+      position: relative;
+    }
+  }
+`;

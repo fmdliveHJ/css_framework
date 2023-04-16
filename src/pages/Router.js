@@ -5,9 +5,10 @@ import Modal from './Modal';
 import Formfiled from './Formfiled';
 
 import styled from 'styled-components';
-import Interactive from './Interactive';
+
 import ColorTextGuilde from './ColorTextGuilde';
 import IconGuide from './IconGuide';
+import ComponentGuide from './ComponentGuide';
 
 const Router = () => {
   return (
@@ -20,16 +21,16 @@ const Router = () => {
           <NavLink to='/dropdown'>Dropdown</NavLink>
           <NavLink to='/modal'>Modal</NavLink>
           <NavLink to='/iconguide'>IconGuide</NavLink>
-          <NavLink to='/interactive'>Interactive</NavLink>
+          <NavLink to='/ComponentGuide'>Npm-ComponentGuide</NavLink>
         </div>
       </NavList>
       <Routes>
+        <Route path='/' element={<ColorTextGuilde />}></Route>
         <Route path='/formfiled' element={<Formfiled />}></Route>
         <Route path='/dropdown' element={<Dropdown />}></Route>
         <Route path='/modal' element={<Modal />}></Route>
-        <Route path='/interactive' element={<Interactive />}></Route>
+        <Route path='/ComponentGuide' element={<ComponentGuide />}></Route>
         <Route path='/iconguide' element={<IconGuide />}></Route>
-        <Route path='/' element={<ColorTextGuilde />}></Route>
       </Routes>
     </>
   );
